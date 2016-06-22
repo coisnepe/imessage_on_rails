@@ -7,7 +7,8 @@
 #
 
 class MessageAttachment < ActiveRecord::Base
-  self.table_name = "message_attachment_join"
+  self.table_name = 'message_attachment_join'
+
   belongs_to :message
   belongs_to :attachment
 end

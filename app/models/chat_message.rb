@@ -7,7 +7,8 @@
 #
 
 class ChatMessage < ActiveRecord::Base
-  self.table_name = "chat_message_join"
+  self.table_name = 'chat_message_join'
+
   belongs_to :chat
   belongs_to :message
 end

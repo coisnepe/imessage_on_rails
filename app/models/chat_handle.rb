@@ -7,7 +7,8 @@
 #
 
 class ChatHandle < ActiveRecord::Base
-  self.table_name = "chat_handle_join"
+  self.table_name = 'chat_handle_join'
+
   belongs_to :chat
   belongs_to :handle
 end

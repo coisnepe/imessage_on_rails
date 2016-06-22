@@ -17,7 +17,8 @@
 #
 
 class Attachment < ActiveRecord::Base
-  self.table_name = "attachment"
+  self.table_name = 'attachment'
+
   has_many :message_attachment
   has_many :message, through: :message_attachment
 end

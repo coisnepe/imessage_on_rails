@@ -21,7 +21,8 @@
 #
 
 class Chat < ActiveRecord::Base
-  self.table_name = "chat"
+  self.table_name = 'chat'
+
   has_many :chat_message
   has_many :message, through: :chat_message
 

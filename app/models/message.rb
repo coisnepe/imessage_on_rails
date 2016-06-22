@@ -57,7 +57,8 @@
 
 class Message < ActiveRecord::Base
   self.table_name = 'message'
-  self.inheritance_column = "this"
+  self.inheritance_column = 'message_type' # "type" is a reserved column name
+
   has_many :chat_message
   has_many :chat, through: :chat_message
 
