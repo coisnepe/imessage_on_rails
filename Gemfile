@@ -6,11 +6,16 @@ gem 'sqlite3'
 group :development, :test do
   gem 'byebug'
   gem 'pry-rails'
-  gem 'awesome_print'
 end
 
 group :development do
+  gem 'awesome_print'
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'annotate'
+end
+
+group :test do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
 end
