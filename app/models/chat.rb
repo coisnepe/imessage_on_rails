@@ -28,4 +28,14 @@ class Chat < ActiveRecord::Base
 
   has_many :chat_handle
   has_many :handle, through: :chat_handle
+
+  def sanitized_guid
+    guid.sub(/\w+;.;/, '')
+  end
+
+  def self.fuzzy_search(params)
+    results = []
+    params.each { |param| results << where("guid LIKE '%#{param}%'") }
+    results.flatten.pluck(:ROWID)
+  end
 end
