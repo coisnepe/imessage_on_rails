@@ -17,6 +17,3 @@ class ChatMessage < ActiveRecord::Base
     where(chat_id: chat_ids).count
   end
 end
-
-# rowid = Chat.where("guid LIKE '%eugenie%' OR guid like '%057483%'").pluck(:ROWID)
-# ChatMessage.where(chat_id: rowid).count
