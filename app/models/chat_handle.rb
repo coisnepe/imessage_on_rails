@@ -6,7 +6,7 @@
 #  handle_id :integer
 #
 
-class ChatHandle < ActiveRecord::Base
+class ChatHandle < ApplicationRecord
   self.table_name = 'chat_handle_join'
 
   belongs_to :chat

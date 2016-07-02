@@ -6,7 +6,7 @@
 #  attachment_id :integer
 #
 
-class MessageAttachment < ActiveRecord::Base
+class MessageAttachment < ApplicationRecord
   self.table_name = 'message_attachment_join'
 
   belongs_to :message

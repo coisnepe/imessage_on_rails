@@ -16,7 +16,7 @@
 #  total_bytes    :integer          default(0)
 #
 
-class Attachment < ActiveRecord::Base
+class Attachment < ApplicationRecord
   self.table_name = 'attachment'
 
   has_many :message_attachment

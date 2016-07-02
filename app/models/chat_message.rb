@@ -6,7 +6,7 @@
 #  message_id :integer
 #
 
-class ChatMessage < ActiveRecord::Base
+class ChatMessage < ApplicationRecord
   self.table_name = 'chat_message_join'
 
   belongs_to :chat

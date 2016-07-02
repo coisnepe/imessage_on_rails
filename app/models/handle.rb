@@ -9,7 +9,7 @@
 #  uncanonicalized_id :text
 #
 
-class Handle < ActiveRecord::Base
+class Handle < ApplicationRecord
   self.table_name = 'handle'
 
   has_many :chat_handle

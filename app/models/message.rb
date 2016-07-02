@@ -55,7 +55,7 @@
 #  message_source        :integer          default(0)
 #
 
-class Message < ActiveRecord::Base
+class Message < ApplicationRecord
   self.table_name = 'message'
   self.inheritance_column = 'message_type' # "type" is a reserved column name
 

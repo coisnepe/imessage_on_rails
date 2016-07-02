@@ -20,7 +20,7 @@
 #  successful_query      :integer          default(1)
 #
 
-class Chat < ActiveRecord::Base
+class Chat < ApplicationRecord
   self.table_name = 'chat'
 
   has_many :chat_message
