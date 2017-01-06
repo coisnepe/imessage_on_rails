@@ -35,7 +35,8 @@ class Chat < ApplicationRecord
 
   def self.fuzzy_search(params)
     results = []
-    params.each { |param| results << where("guid LIKE '%#{param}%'") }
-    results.flatten.pluck(:ROWID)
+    params.each { |param| results << "guid LIKE '%#{param}%'" }
+    joined_results = results.join(' OR ')
+    where(joined_results).pluck(:ROWID)
   end
 end
